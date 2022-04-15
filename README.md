@@ -17,4 +17,6 @@ Dependencies used in this repo:
 * `st-annotated-text`: A simple component to display annotated text in Streamlit apps
 * `black` to format the code locally. This package will only be used in dev mode.
 
-I've also deployed it to Heroku and made it live on internet for other users to use and play with
+I've also deployed it to Heroku and made it live on internet for other users to use and play with:
+
+![alt text](https://github.com/Andr3wKaranja/anonymize-text-data/tree/main/images/image.png?raw=true)
