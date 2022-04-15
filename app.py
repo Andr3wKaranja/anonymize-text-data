@@ -15,17 +15,17 @@ def load_models():
 
 
 def process_text(doc, selected_entities, anonymize=False):
-    tokens= []
+    tokens = []
     for token in doc:
-        if (token.ent_type_ == "PERSON") & ( "PER" in selected_entities):
-            tokens.append((token.text, "PERSON", "#faa"))
-        elif (token.ent_type_ in  ["GPE", "LOC"]) & ( "LOC" in selected_entities):
-            tokens.append((token.text, "LOCATION", "#fda"))
-        if (token.ent_type_ == "ORG") & ( "ORG" in selected_entities):
-            tokens.append((token.text, "ORGANIZATION", "#afa"))
+        if (token.ent_type_ == "PERSON") & ("PER" in selected_entities):
+            tokens.append((token.text, "Person", "#A13333"))
+        elif (token.ent_type_ in ["GPE", "LOC"]) & ("LOC" in selected_entities):
+            tokens.append((token.text, "Location", "#B3541E"))
+        elif (token.ent_type_ == "ORG") & ("ORG" in selected_entities):
+            tokens.append((token.text, "Organization", "#064635"))
         else:
-            tokens.append((" " + token.text + " "))
-    
+            tokens.append(" " + token.text + " ")
+
     if anonymize:
         anonmized_tokens = []
         for token in tokens:
@@ -33,17 +33,17 @@ def process_text(doc, selected_entities, anonymize=False):
                 anonmized_tokens.append(("X" * len(token[0]), token[1], token[2]))
             else:
                 anonmized_tokens.append(token)
-                
         return anonmized_tokens
+
     return tokens
 
 models = load_models()
 
-selected_language = st.sidebar.selectbox("Select a language", options=["English(en)", "French(fr)"])
+selected_language = st.sidebar.selectbox("Select a language", options=["en", "fr"])
 selected_entities = st.sidebar.multiselect(
     "Select the entities you wish to detect",
-    options=["LOC", "PERSON", "ORG"],
-    default=["LOC", "PERSON", "ORG"]
+    options=["LOC", "PER", "ORG"],
+    default=["LOC", "PER", "ORG"]
 )
 
 selected_model=models[selected_language]
@@ -64,7 +64,7 @@ tokens = process_text(doc, selected_entities)
 annotated_text(*tokens)
 
 if anonymize:
-    st.markdown("** Anonymized text**")
+    # st.markdown("** Anonymized text**")
     st.markdown("---")
     anonymized_tokens = process_text(doc, selected_entities, anonymize=anonymize)
     annotated_text(*anonymized_tokens)
