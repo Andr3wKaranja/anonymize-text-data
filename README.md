@@ -1,5 +1,5 @@
 # Built a text anonymizer with Spacy and Streamlit dependencies
-
+[![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/Andr3wKaranja/anonymize-text-data/main/app.py) [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-360/) ![Heroku](https://pyheroku-badge.herokuapp.com/?app=anonimizer-text-webapp&style=flat-square) 
 A web app to anonymize provided text data with Streamlit and Spacy.
 ## Installation
 Clone the project and init a pipenv environment in it by installing the needed dependencies:
@@ -17,6 +17,6 @@ Dependencies used in this repo:
 * `st-annotated-text`: A simple component to display annotated text in Streamlit apps
 * `black` to format the code locally. This package will only be used in dev mode.
 
-I've also deployed it to Heroku and made it live on internet for other users to use and play with:
+I've also deployed it to [Heroku](https://anonimizer-text-webapp.herokuapp.com/) and made it live on internet for other users to use and play with:
 
 ![alt text](/images/image.png?raw=true)
