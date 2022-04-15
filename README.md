@@ -19,4 +19,4 @@ Dependencies used in this repo:
 
 I've also deployed it to Heroku and made it live on internet for other users to use and play with:
 
-![alt text](https://github.com/Andr3wKaranja/anonymize-text-data/tree/main/images/image.png?raw=true)
+![alt text](/images/image.png?raw=true)
