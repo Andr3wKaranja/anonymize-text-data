@@ -1,5 +1,6 @@
 # Built a text anonymizer with Spacy and Streamlit dependencies
 [![Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/Andr3wKaranja/anonymize-text-data/main/app.py) [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-360/) ![Heroku](https://pyheroku-badge.herokuapp.com/?app=anonimizer-text-webapp&style=flat-square) 
+
 A web app to anonymize provided text data with Streamlit and Spacy.
 ## Installation
 Clone the project and init a pipenv environment in it by installing the needed dependencies:
